@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'workout-log',
+    modulePrefix: 'workout-log-frontend',
     environment,
     rootURL: '/',
     locationType: 'auto',
