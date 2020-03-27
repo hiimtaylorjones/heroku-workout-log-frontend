@@ -23,9 +23,9 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.apiHost = process.env.API_HOST;
+
   if (environment === 'development') {
-    console.log(process.env.API_HOST);
-    ENV.apiHost = process.env.API_HOST;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
