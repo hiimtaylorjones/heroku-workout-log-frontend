@@ -4,4 +4,4 @@ import ENV from '../config/environment';
 export default class ApplicationAdapter extends JSONAPIAdapter {
   namespace = 'api/v1';
   host = ENV.apiHost;
-}
+} 
