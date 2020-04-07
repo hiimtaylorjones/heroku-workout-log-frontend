@@ -11,9 +11,9 @@
       <th></th>
     </thead>
     <tbody>
-    {{#each model as |workout|}} 
+    {{#each @model as |workout|}} 
       <tr>
-        <th>Today</th>
+        <th>{{moment-format workout.createdAt 'MM/DD/YYYY' 'MM-DD-YYYY'}}</th>
         <td>{{workout.title}}</td>
         <td>{{workout.classification}}</td>
         <td><LinkTo @route="workouts.edit" @model={{workout}}>View</LinkTo></td>
