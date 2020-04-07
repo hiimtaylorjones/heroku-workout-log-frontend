@@ -5,6 +5,8 @@ export default class WorkoutModel extends Model {
   @attr('string') classification;
   @attr('string') condition;
   @attr('string') notes;
+  @attr('date') createdAt;
+  @attr('date') updatedAt;
 
   // Relationships
   @hasMany('units') units;
