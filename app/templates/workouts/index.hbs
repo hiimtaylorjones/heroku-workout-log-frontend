@@ -1,8 +1,25 @@
 <h1>Workout Index</h1>
 <hr class="hr">
-{{#each model as |workout|}}
-  <h1>{{workout.title}}</h1>
-  <h3>{{workout.condition}}</h3>
-  <p>{{workout.notes}}</p>
-  <hr class="hr">
-{{/each}}
+
+<div class="table-container">
+ 
+  <table class="table">
+    <thead>
+      <th></th>
+      <th>Title</th>
+      <th>Classification</th>
+      <th></th>
+    </thead>
+    <tbody>
+    {{#each model as |workout|}} 
+      <tr>
+        <th>Today</th>
+        <td>{{workout.title}}</td>
+        <td>{{workout.classification}}</td>
+        <td><LinkTo @route="workouts.edit" @model={{workout}}>View</LinkTo></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  
+</div>
