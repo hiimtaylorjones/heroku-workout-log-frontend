@@ -1,0 +1,34 @@
+<h1>Edit Workout</h1>
+
+<div class="workout-form">
+   <div class="field">
+    <label class="label">Title</label>
+    <div class="control">
+      <Input class="input" id="title" @value={{@model.title}} />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Classification</label>
+    <div class="control">
+      <Input class="input" id="classification" @value={{@model.classification}} />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Condition</label>
+    <div class="control">
+      <Input class="input" id="condition" @value={{@model.condition}} />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Notes</label>
+    <div class="control">
+      <Textarea class="textarea" rows="10" id="notes" @value={{@model.notes}} />
+    </div>
+  </div>
+</div>
+
+<div class="button" {{on "click" updateWorkout}}>Update Workout</div>
+
+<div class="movements-form">
+  <h3>Movements</h3>
+</div>
