@@ -61,6 +61,6 @@
     "edition": "octane"
   },
   "dependencies": {
-    "rails-csrf": "^2.0.1"
+    "rails-csrf": "git+https://github.com/abuiles/rails-csrf.git"
   }
 }
