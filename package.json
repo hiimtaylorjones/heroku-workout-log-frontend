@@ -60,5 +60,7 @@
   "ember": {
     "edition": "octane"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rails-csrf": "^2.0.1"
+  }
 }
