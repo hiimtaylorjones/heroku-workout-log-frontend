@@ -6,8 +6,17 @@ import { tracked } from '@glimmer/tracking';
 export default class WorkoutsEditController extends Controller {
   @service store;
 
+  conditionOptions = ["For Time", "Max Reps", "Other"];
+
   @tracked model;
-  
+  @tracked condition = "For Time";
+
+  @action
+  selectCondition(newCondition) {
+    this.condition = newCondition;
+  }
+
+
   @action
   updateWorkout() {
     let workout = this.model;
