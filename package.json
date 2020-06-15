@@ -61,8 +61,5 @@
   },
   "ember": {
     "edition": "octane"
-  },
-  "dependencies": {
-    "rails-csrf": "git+https://github.com/abuiles/rails-csrf.git"
   }
 }
