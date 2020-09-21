@@ -6,6 +6,11 @@
   <div class="level-right">
     <ul class="nav-items">
       <li class="nav-item"><LinkTo @route="workouts.index">WORKOUTS</LinkTo></li>
+    {{#if this.session.isAuthenticated}}
+      <li class="nav-item"><a {{on "click" this.invalidateSession}}>Logout</a></li>
+    {{else}}
+      <li class="nav-item"><LinkTo @route="login">Login</LinkTo></li>
+    {{/if}}
     </ul>
   </div>
 </nav>

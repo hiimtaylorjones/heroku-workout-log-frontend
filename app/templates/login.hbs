@@ -1,0 +1,11 @@
+{{!-- app/templates/login.hbs --}}
+<form {{on "submit" this.authenticate}}>
+  <label for="identification">Email</label>
+  <input id='identification' placeholder="Enter Email" value={{this.identification}} {{on "change" this.updateIdentification}}>
+  <label for="password">Password</label>
+  <input id='password' placeholder="Enter Password" value={{this.password}} {{on "change" this.updatePassword}}>
+  <button type="submit">Login</button>
+  {{#if this.errorMessage}}
+    <p>{{this.errorMessage}}</p>
+  {{/if}}
+</form>
