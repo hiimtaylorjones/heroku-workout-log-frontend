@@ -20,6 +20,9 @@ export default class WorkoutsEditController extends Controller {
   @action
   updateWorkout() {
     let workout = this.model;
-    workout.save().then(console.log("Saved!"));
+    workout.save().then((data) => {
+      console.log(data);
+      console.log('Saved');
+    });
   }
 }
