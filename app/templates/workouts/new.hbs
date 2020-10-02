@@ -29,4 +29,11 @@
 
 <div class="movements-form">
   <h3>Movements</h3>
+  {{#if model.movements }}
+    {{#each model.movements as |movement| }}
+      <MovementForm @movement=model.movement @workout=model />
+    {{/each}}
+  {{else}}
+    <MovementForm @workout=model/>  
+  {{/if}}
 </div>

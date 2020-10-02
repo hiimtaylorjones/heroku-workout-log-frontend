@@ -1,0 +1,17 @@
+<div class="movement-form">
+  <div class="field">
+    <label class="label">Type</label>
+    <div class="control">
+      <Input class="input" id="title" @value={{movement.title}} />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Description</label>
+    <div class="control">
+      <Input class="input" id="title" @value={{movement.description}} />
+    </div>
+  </div>
+
+  <div class="button" {{on "click" saveMovement}}>Save Movement</div>
+</div>
