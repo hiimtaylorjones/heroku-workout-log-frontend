@@ -4,19 +4,25 @@
   <div class="field">
     <label class="label">Type</label>
     <div class="control">
-      <Input id="classification" @value={{model.classification}} />
+      <Input class="input" id="classification" @value={{model.classification}} />
     </div>
   </div>
   <div class="field">
     <label class="label">Condition</label>
     <div class="control">
-      <Input id="condition" @value={{model.condition}} />
+      <div class="select">
+         <select onchange={{action "selectCondition" value="target.value"}}>
+          {{#each conditionOptions as |choice|}}
+            <option value={{choice}} selected={{eq condition choice}}>{{choice}}</option>
+          {{/each}}
+        </select>
+      </div>
     </div>
   </div>
   <div class="field">
     <label class="label">Notes</label>
     <div class="control">
-      <Textarea id="notes" @value={{model.notes}} />
+      <Textarea class="textarea" id="notes" @value={{model.notes}} />
     </div>
   </div>
 </div>

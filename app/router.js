@@ -17,7 +17,5 @@ Router.map(function() {
   });
 
   this.route('login');
-  this.route('authenticated', { path: '' }, function() {
-    
-  });
+  this.route('authenticated', { path: '' });
 });
