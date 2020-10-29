@@ -4,7 +4,7 @@
   <div class="field">
     <label class="label">Type</label>
     <div class="control">
-      <Input class="input" id="classification" @value={{model.classification}} />
+      <Input class="input" id="classification" @value={{workout.classification}} />
     </div>
   </div>
   <div class="field">
@@ -22,18 +22,12 @@
   <div class="field">
     <label class="label">Notes</label>
     <div class="control">
-      <Textarea class="textarea" id="notes" @value={{model.notes}} />
+      <Textarea class="textarea" id="notes" @value={{workout.notes}} />
     </div>
   </div>
 </div>
 
 <div class="movements-form">
   <h3>Movements</h3>
-  {{#if model.movements }}
-    {{#each model.movements as |movement| }}
-      <MovementForm @movement=model.movement @workout=model />
-    {{/each}}
-  {{else}}
-    <MovementForm @workout=model/>  
-  {{/if}}
+  <MovementsFormList @workout={{@workout}} @movements={{@movements}}/>
 </div>

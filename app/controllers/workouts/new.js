@@ -9,9 +9,11 @@ export default class WorkoutsNewController extends Controller {
 
   conditionOptions = ["For Time", "Max Reps", "Other"];
 
-  @tracked model;
+  @tracked workout;
+  @tracked movements;
   @tracked condition = "For Time";
 
+  
   @action
   selectCondition(newCondition) {
     this.condition = newCondition;
@@ -19,7 +21,7 @@ export default class WorkoutsNewController extends Controller {
 
   @action
   saveWorkout() {
-    let workout = this.model;
+    let workout = this.workout;
     workout.save().then((data) => {
       console.log(data);
       console.log('Saved');

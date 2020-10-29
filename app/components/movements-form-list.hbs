@@ -1,0 +1,9 @@
+{{#if @isLoading}}
+  Loading...
+{{else}}
+  {{#each @movements as |movement| }}
+    <MovementForm @movement=movement @workout=@workout></MovementForm>
+  {{/each}}
+{{/if}}
+
+<div class="button" {{on "click" this.addMovement}}>Add Movement</div>
