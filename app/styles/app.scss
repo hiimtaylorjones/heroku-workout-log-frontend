@@ -1,6 +1,7 @@
 @import 'bulma';
 @import 'navigation';
 @import 'workouts';
+@import 'movement';
 
 h1 {
   font-size: 3.25em;
@@ -22,3 +23,6 @@ h5 {
   font-size: 1.5em;
 }
 
+body {
+  padding-bottom: 10%;
+}
